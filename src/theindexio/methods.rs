@@ -24,12 +24,6 @@ pub async fn get_verified_creator_accounts(
                         "offset": 326u32,
                         "bytes": creator
                     }
-                },
-                {
-                    "memcmp": {
-                        "offset": 358u32,
-                        "bytes": "2"
-                    }
                 }
                 ]
             }

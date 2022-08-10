@@ -114,7 +114,7 @@ pub fn get_mint_accounts(
             }
         };
 
-        if creator_is_verified(&metadata.data.creators, position) {
+        if true {// creator_is_verified(&metadata.data.creators, position) {
             mint_accounts.push(metadata.mint.to_string());
         }
     }
@@ -180,11 +180,6 @@ pub fn snapshot_holders(
                     return;
                 }
             };
-
-            // Check that first creator is verified
-            if !creator_is_verified(&metadata.data.creators, position) {
-                return;
-            }
 
             let token_accounts = match retry(
                 Exponential::from_millis_with_factor(250, 2.0).take(3),
